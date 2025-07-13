@@ -5,6 +5,14 @@ from random import choice as rchoice
 from bot import config_dict, LOGGER
 from bot.helper.themes import wzml_minimal
 
+from . import wzml_futuristic
+AVL_THEMES = {
+    "minimal": wzml_minimal,
+    "emoji": wzml_emoji,
+    "futuristic": wzml_futuristic,
+}
+
+
 AVL_THEMES = {}
 for theme in listdir("bot/helper/themes"):
     if theme.startswith("wzml_") and theme.endswith(".py"):
